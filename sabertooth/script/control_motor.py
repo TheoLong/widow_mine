@@ -22,6 +22,7 @@ def moveLeft(power):
 		output=(power/float(100))*step	
 		output=round(output,0)
 		output=int(output)
+		output=64-output
 	else:
 		output=0
 		print("power input error")
@@ -41,7 +42,7 @@ def moveRight(power):
 		output=(power/float(100))*step	
 		output=round(output,0)
 		output=int(output)
-		output=127+output
+		output=192-output
 	else:
 		output=0
 		print("power input error")

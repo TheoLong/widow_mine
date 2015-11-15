@@ -12,7 +12,7 @@ def moveLeft(power):
 		output=0
 	elif power>0:
 		output=(power/100)*step	
-		round(output,0)
+		round(output)
 		output=64+output
 	elif power<0:
 		abs(power)
@@ -30,7 +30,7 @@ def moveRight(power):
 		output=192
 	elif power>0:
 		output=(power/100)*step	
-		round(output,0)
+		round(output)
 		output=192+output
 	elif power<0:
 		abs(power)

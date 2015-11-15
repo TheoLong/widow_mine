@@ -10,7 +10,9 @@ def moveLeft(power):
 	if power==0:
 		output=64
 	elif power>0:
-		output=(power/100)*step	
+		output=(power/100)*step
+		print("percentage: ")
+		print(power/100)
 		print("step: ")
 		print (step)
 		output=round(output,0)

@@ -18,7 +18,7 @@ def moveLeft(power):
 		output=int(output)
 		output=64+output
 	elif power<0:
-		abs(power)
+		power=abs(power)
 		output=(power/float(100))*step	
 		output=round(output,0)
 		output=int(output)
@@ -37,7 +37,7 @@ def moveRight(power):
 		output=int(output)
 		output=192+output
 	elif power<0:
-		abs(power)
+		power=abs(power)
 		output=(power/float(100))*step	
 		output=round(output,0)
 		output=int(output)

@@ -11,7 +11,11 @@ def moveLeft(power):
 		output=64
 	elif power>0:
 		output=(power/100)*step	
+		print("step: ")
+		print (step)
 		output=round(output,0)
+		print(round: )
+		print(output)
 		output=int(output)
 		output=64+output
 	elif power<0:

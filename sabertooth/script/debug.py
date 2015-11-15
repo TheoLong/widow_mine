@@ -9,6 +9,7 @@ while (i != 100):
 	moveLeft(left)
 	moveRight(right)
 	left,right=raw_input("command: ").split()
+	left, right = [int(left), int(right)]
 	i=i+1
 	
 

@@ -3,8 +3,8 @@ import serial
 import math
 UART.setup("UART1")
 ser = serial.Serial(port = "/dev/ttyO0",baudrate = 9600)
-serial.close()
-serial.open()
+ser.close()
+ser.open()
 step=63
 def moveLeft(power):
 	if power==0:

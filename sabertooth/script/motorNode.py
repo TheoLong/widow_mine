@@ -15,9 +15,9 @@ from std_msgs.msg import String
 
 # Create variable so we can always see/use it, but set it to a value that indicates it's not yet valid
 def rightMotor(msg):	
-	moveRight(msg.velocity[0])
+	moveRight(msg.velocity[0]*10)
 def leftMotor(msg):
-	moveLeft(msg.velocity[0])
+	moveLeft(msg.velocity[0]*10)
 
 # If this is loaded as the main python file, execute the main details
 if __name__ == '__main__':

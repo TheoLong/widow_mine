@@ -20,6 +20,7 @@ def moveLeft(power):
 	else:
 		output=0
 		print("power input error")
+	print(output)
 	ser.write(output)
 
 def moveRight(power):
@@ -37,6 +38,7 @@ def moveRight(power):
 	else:
 		output=0
 		print("power input error")
+	print (output)
 	ser.write(output)
 
 

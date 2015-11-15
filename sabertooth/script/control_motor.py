@@ -14,7 +14,7 @@ def moveLeft(power):
 		print("step: ")
 		print (step)
 		output=round(output,0)
-		print(round: )
+		print("round:" )
 		print(output)
 		output=int(output)
 		output=64+output

@@ -7,6 +7,7 @@ ser.close()
 ser.open()
 step=63
 def moveLeft(power):
+	
 	if power==0:
 		output=0
 	elif power>0:
@@ -21,7 +22,7 @@ def moveLeft(power):
 		output=0
 		print("power input error")
 	print(output)
-	ser.write(output)
+	ser.write(chr(output))
 
 def moveRight(power):
 	if power==0:
@@ -39,7 +40,7 @@ def moveRight(power):
 		output=0
 		print("power input error")
 	print (output)
-	ser.write(output)
+	ser.write(chr(output))
 
 
 

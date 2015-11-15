@@ -2,7 +2,7 @@ import Adafruit_BBIO.UART as UART
 import serial
 import math
 UART.setup("UART1")
-ser = serial.Serial(port = "/dev/ttyo0",baudrate = 9600)
+ser = serial.Serial(port = "/dev/ttyO0",baudrate = 9600)
 serial.close()
 serial.open()
 step=63

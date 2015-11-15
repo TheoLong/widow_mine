@@ -7,17 +7,18 @@ ser.close()
 ser.open()
 step=63
 def moveLeft(power):
-	print(power)
 	if power==0:
 		output=64
 	elif power>0:
 		output=(power/100)*step	
 		output=round(output,0)
+		output=int(output)
 		output=64+output
 	elif power<0:
 		abs(power)
 		output=(power/100)*step	
 		output=round(output,0)
+		output=int(output)
 	else:
 		output=0
 		print("power input error")
@@ -25,17 +26,18 @@ def moveLeft(power):
 	ser.write(chr(output))
 
 def moveRight(power):
-	print(power)
 	if power==0:
 		output=192
 	elif power>0:
 		output=(power/100)*step	
 		output=round(output,0)
+		output=int(output)
 		output=192+output
 	elif power<0:
 		abs(power)
 		output=(power/100)*step	
 		output=round(output,0)
+		output=int(output)
 		output=127+output
 	else:
 		output=0

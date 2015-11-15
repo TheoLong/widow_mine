@@ -4,7 +4,7 @@ import math
 UART.setup("UART1")
 ser = serial.Serial(port = "/dev/ttyO0",baudrate = 9600)
 if ser.isOpen:
-	ser.write(0)
+	ser.write(chr(0))
 ser.close()
 ser.open()
 ser.write(chr(0))

@@ -10,19 +10,13 @@ def moveLeft(power):
 	if power==0:
 		output=64
 	elif power>0:
-		output=(power/100)*step
-		print("percentage: ")
-		print(power/100)
-		print("step: ")
-		print (step)
+		output=(power/float(100))*step
 		output=round(output,0)
-		print("round:" )
-		print(output)
 		output=int(output)
 		output=64+output
 	elif power<0:
 		abs(power)
-		output=(power/100)*step	
+		output=(power/float(100))*step	
 		output=round(output,0)
 		output=int(output)
 	else:
@@ -35,13 +29,13 @@ def moveRight(power):
 	if power==0:
 		output=192
 	elif power>0:
-		output=(power/100)*step	
+		output=(power/float(100))*step	
 		output=round(output,0)
 		output=int(output)
 		output=192+output
 	elif power<0:
 		abs(power)
-		output=(power/100)*step	
+		output=(power/float(100))*step	
 		output=round(output,0)
 		output=int(output)
 		output=127+output

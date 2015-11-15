@@ -1,4 +1,5 @@
-import control_motor
+from control_motor import moveLeft
+from control_motor import moveRight
 
 
 left,right=raw_input("command: ").split()

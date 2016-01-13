@@ -1,7 +1,7 @@
 import Adafruit_BBIO.UART as UART
 import serial
 import math
-UART.setup("UART1")
+UART.setup("UART0")
 ser = serial.Serial(port = "/dev/ttyO0",baudrate = 9600)
 if ser.isOpen:
 	ser.write(chr(0))

@@ -171,6 +171,7 @@ include_directories(
 install(FILES
 	script/control_motor.py
 	script/motorNode.py
+	script/xbox_node.py
 	 DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
 

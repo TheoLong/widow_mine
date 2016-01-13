@@ -23,7 +23,7 @@ if __name__ == '__main__':
     #Create subscriber, and tell it to call js_call() whenever a message is received
     rospy.Subscriber('/joy', Joy, pcurrent=gc.movePitch(msg.axes[3], pcurrent))
     rospy.Subscriber('/joy', Joy, rcurrent=gc.moveRoll(msg.axes[2], rcurrent))
-    #rospy.Subscriber('/joy', Joy, grab)
+    rospy.Subscriber('/joy', Joy, grab)
     #We need to wait for new messages
     rospy.spin()
   #If we are interrupted, catch the exception, but do nothing

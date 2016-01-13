@@ -1,41 +1,44 @@
-
+from servo_drive import pwm as pwm
 
 def movePitch (pitch, pcurrent)
+	step=50
 	upper=180
 	lower=0
 	if current==upper or current== lower
-		return current
+		return pcurrent
 	else
 		if pitch>=0.1:
 			pcurrent=pcurrent+step*pitch
-			pitch(pcurrent)
+			pwm.pitch(pcurrent)
 		else if pitch<=0.1:
 			pcurrent=pcurrent-step*pitch
-			pitch(pcurrent)
+			pwm.pitch(pcurrent)
 		return pcurrent
-def mvoeYaw (yaw,ycurrent)
+def moveRoll (roll,rcurrent)
+	step=50
 	upper=180
 	lower=0
-	if ycurrent==upper or ycurrent== lower
-		return current
+	if rcurrent==upper or rcurrent== lower
+		return rcurrent
 	else
-		if pitch>=0.1:
-			ycurrent=current+step*pitch
-			pitch(ycurrent)
-		else if pitch<=0.1:
-			ycurrent=ycurrent-step*pitch
-			pitch(ycurrent)
+		if roll>=0.1:
+			rcurrent=rcurrent+step*roll
+			pwm.roll(rcurrent)
+		else if roll<=0.1:
+			rcurrent=rcurrent-step*roll
+			pwm.roll(rcurrent)
 		return ycurrent
 def grab(grab,gcurrent)
+	step=50
 	upper=180
 	lower=0
 	if gcurrent==upper or gcurrent== lower
-		return current
+		return gcurrent
 	else
-		if pitch>=0.1:
-			gcurrent=gcurrent+step*pitch
-			pitch(gcurrent)
-		else if pitch<=0.1:
-			gcurrent=gcurrent-step*pitch
-			pitch(gcurrent)
-		return current
+		if grab>=0.1:
+			gcurrent=gcurrent+step*grab
+			pwm.gripper(gcurrent)
+		else if grab<=0.1:
+			gcurrent=gcurrent-step*grab
+			pwm.gripper(gcurrent)
+		return gcurrent

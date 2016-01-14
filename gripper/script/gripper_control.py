@@ -4,13 +4,14 @@ def movePitch (pitch, pcurrent):
 	step=50.0
 	upper=180.0
 	lower=0.0
+	print pcurrent
 	#print pitch
 	if (pcurrent == lower and pitch < 0) or (pcurrent == upper and pitch > 0) :
 		return pcurrent
 	else:
 		if pitch>=0.1:
 			temp=pcurrent+step*pitch
-			print pcurrent
+			#print pcurrent
 			pwm.pitch(pcurrent)
 			return temp
 		elif pitch<=-0.1:

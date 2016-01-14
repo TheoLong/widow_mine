@@ -18,6 +18,7 @@ def pitch(msg):
   tamp=gc.movePitch(msg.axes[3], pcurrent)
   global pcurrent
   pcurrent = tamp
+  print pcurrent
 def roll(msg):
   tamp=gc.moveRoll(msg.axes[2], rcurrent)
   global rcurrent

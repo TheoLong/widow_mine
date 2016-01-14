@@ -12,8 +12,7 @@ import gripper_control as gc
 PWM.start("P9_14",0,50)
 PWM.start("P9_16",0,50)
 PWM.start("P8_13",0,50)
-pcurrent = 0.0
-rcurrent = 0.0
+
 
 def pitch(msg,pcurrent):
   print pcurrent
@@ -27,12 +26,18 @@ def roll(msg,rcurrent):
 #def grab(msg):
   #gc.grab(msg.axes[3], gcurrent)
 if __name__ == '__main__':
+  pcurrent = 0.0
+  rcurrent = 0.0
+  pmsg=None
+  rmsg=None
   try:
     #Initialize node
     rospy.init_node('gripper_node')
     #Create subscriber, and tell it to call js_call() whenever a message is received
-    rospy.Subscriber('/joy', Joy, pitch)
-    rospy.Subscriber('/joy', Joy, roll)
+    rospy.Subscriber('/joy', Joy, pmsg)
+    pitch(pmsg,pcurrent)
+    rospy.Subscriber('/joy', Joy, rmsg)
+    roll(rmsg,rcurrent)
     #rospy.Subscriber('/joy', Joy, grab)
     #We need to wait for new messages
     rospy.spin()

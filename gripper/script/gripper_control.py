@@ -26,7 +26,7 @@ def moveRoll (roll,rcurrent):
 	upper=190.0
 	lower=40.0
 	if (rcurrent == lower and roll < 0) or (rcurrent == upper and roll > 0) :
-		return pcurrent
+		return rcurrent
 	else:
 		if abs(roll)>=0.1:
 			temp=rcurrent+step*roll
@@ -42,7 +42,7 @@ def grab(grab,gcurrent):
 	step=5.0
 	upper=190.0
 	lower=40.0
-	if (rcurrent == lower and grab < 0) or (rcurrent == upper and grab > 0) or (grab==0):
+	if (gcurrent == lower and grab < 0) or (gcurrent == upper and grab > 0) or (grab==0):
 		return pcurrent
 	else:
 		if abs(grab)>0:

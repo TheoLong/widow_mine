@@ -30,6 +30,7 @@ if __name__ == '__main__':
   tmsg=Joy
   def msg_function(msg):
     tmsg=msg
+    print tmsg.axis[3]
   pcurrent=0.0
   rcurrent=0.0
   try:

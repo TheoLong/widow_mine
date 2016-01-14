@@ -23,8 +23,8 @@ def movePitch (pitch, pcurrent):
 		
 def moveRoll (roll,rcurrent):
 	step=5.0
-	upper=190.0
-	lower=40.0
+	upper=270
+	lower=0
 	if (rcurrent == lower and roll < 0) or (rcurrent == upper and roll > 0) :
 		return rcurrent
 	else:
@@ -40,18 +40,16 @@ def moveRoll (roll,rcurrent):
 			return rcurrent
 def grab(grab,gcurrent):
 	step=5.0
-	upper=190.0
-	lower=40.0
+	upper=0
+	lower=270
+	print grab
 	if (gcurrent == lower and grab < 0) or (gcurrent == upper and grab > 0) or (grab==0):
 		return gcurrent
 	else:
-		if abs(grab)>0:
-			temp=gcurrent+step*grab
-			if temp<=lower:
-				temp=lower
-			elif temp>=upper:
-				temp=upper
-			pwm.roll(temp)
-			return temp
-		else:
-			return gcurrent
+		temp=gcurrent+step*grab
+		if temp<=lower:
+			temp=lower
+		elif temp>=upper:
+			temp=upper
+		pwm.roll(temp)
+		return temp

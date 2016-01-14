@@ -25,11 +25,12 @@ if __name__ == '__main__':
     pcurrent=gc.movePitch(msg.axes[3], current)
     print pcurrent
   def roll(msg,current):
+    global rcurrent
     rcurrent=gc.moveRoll(msg.axes[2], current)
     #print rcurrent
   def callback (msg):
     pitch(msg,pcurrent)
-    #roll(msg,rcurrent)
+    roll(msg,rcurrent)
   try:
     #Initialize node
     rospy.init_node('gripper_node')

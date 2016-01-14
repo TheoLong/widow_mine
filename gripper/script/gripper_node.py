@@ -5,8 +5,7 @@
 # Import the Default ROS tools
 import rospy
 # Import the JointState message from sensor_msgs
-from sensor_msgs.msg import JointState
-import drivedemo
+from sensor_msgs.msg import Joy
 import Adafruit_BBIO.GPIO as GPIO
 import Adafruit_BBIO.PWM as PWM
 import gripper_control as gc

@@ -13,7 +13,6 @@ PWM.start("P9_14",0,50)
 PWM.start("P9_16",0,50)
 PWM.start("P8_13",0,50)
 def pitch(msg):
-  global pcurrent
   print pcurrent
   temp=gc.movePitch(msg.axes[3], pcurrent)
   pcurrent = temp
@@ -26,6 +25,8 @@ def roll(msg):
   #gc.grab(msg.axes[3], gcurrent)
 if __name__ == '__main__':
   try:
+    global pcurrent
+    pcurrent = 0.0
     #Initialize node
     rospy.init_node('motornode')
     #Create subscriber, and tell it to call js_call() whenever a message is received

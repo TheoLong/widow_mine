@@ -1,5 +1,5 @@
 import servo_drive as pwm
-
+import math
 def movePitch (pitch, pcurrent):
 	step=50.0
 	upper=180.0
@@ -10,6 +10,7 @@ def movePitch (pitch, pcurrent):
 	else:
 		if pitch>=0.1:
 			pcurrent=pcurrent+step*pitch
+			print "pcurrent"
 			print pcurrent
 			pwm.pitch(pcurrent)
 			return pcurrent

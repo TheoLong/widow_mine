@@ -35,10 +35,10 @@ if __name__ == '__main__':
     #Initialize node
     rospy.init_node('gripper_node')
     #Create subscriber, and tell it to call js_call() whenever a message is received
-    rospy.Subscriber('/joy', Joy, pmsg)
-    pitch(pmsg,pcurrent)
-    rospy.Subscriber('/joy', Joy, rmsg)
-    roll(rmsg,rcurrent)
+    rospy.Subscriber('/joy', Joy, msg)
+    pitch(msg,pcurrent)
+    rospy.Subscriber('/joy', Joy, msg)
+    roll(msg,rcurrent)
     #rospy.Subscriber('/joy', Joy, grab)
     #We need to wait for new messages
     rospy.spin()

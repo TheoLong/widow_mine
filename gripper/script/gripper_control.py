@@ -1,7 +1,7 @@
 import servo_drive as pwm
 import math
 def movePitch (pitch, pcurrent):
-	step=50.0
+	step=5.0
 	upper=180.0
 	lower=0.0
 	#print pcurrent

@@ -43,7 +43,7 @@ def grab(grab,gcurrent):
 	upper=190.0
 	lower=40.0
 	if (gcurrent == lower and grab < 0) or (gcurrent == upper and grab > 0) or (grab==0):
-		return pcurrent
+		return gcurrent
 	else:
 		if abs(grab)>0:
 			temp=gcurrent+step*grab

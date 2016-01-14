@@ -20,8 +20,8 @@ if __name__ == '__main__':
     #Initialize node
     rospy.init_node('motornode')
     #Create subscriber, and tell it to call js_call() whenever a message is received
-    rospy.Subscriber('/joy', Joy, pcurrent=gc.movePitch(msg.axes[3], pcurrent))
-    rospy.Subscriber('/joy', Joy, rcurrent=gc.moveRoll(msg.axes[2], rcurrent))
+    rospy.Subscriber('/joy', Joy, pcurrent=gc.movePitch(axes[3], pcurrent))
+    rospy.Subscriber('/joy', Joy, rcurrent=gc.moveRoll(axes[2], rcurrent))
     #rospy.Subscriber('/joy', Joy, grab)
     #We need to wait for new messages
     rospy.spin()

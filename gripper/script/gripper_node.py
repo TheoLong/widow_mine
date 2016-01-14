@@ -10,7 +10,7 @@ import Adafruit_BBIO.GPIO as GPIO
 import Adafruit_BBIO.PWM as PWM
 import gripper_control as gc
 pcurrent=0
-rccrent=0
+rcurrent=0
 def pitch(msg):
   tamp=gc.movePitch(msg.axes[3], pcurrent)
   global pcurrent

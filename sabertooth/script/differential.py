@@ -12,10 +12,10 @@ def diff_control(gas, steering):
 		if abs(steering)<=0.2:
 			moveLeft(gas*100)
 			moveRight(gas*100)
-		elif steering>0.02:
-			moveLeft(gas*100)
-			moveRight((1-steering)*gas*100)
+		elif steering>0:
+			moveLeft((1-steering)*gas*100)
+			moveRight(gas*100 )
 		else:
-			moveLeft(gas*(1+steering)*100)
-			moveRight(gas*100)
+			moveLeft(gas*100)
+			moveRight(gas*(1+steering)*100)
 

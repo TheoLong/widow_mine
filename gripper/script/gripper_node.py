@@ -29,15 +29,13 @@ def roll(msg,rcurrent):
 if __name__ == '__main__':
   pcurrent=0.0
   rcurrent=0.0
-  pmsg=None
-  rmsg=None
+  msg=None
   try:
     #Initialize node
     rospy.init_node('gripper_node')
     #Create subscriber, and tell it to call js_call() whenever a message is received
     rospy.Subscriber('/joy', Joy, msg)
     pitch(msg,pcurrent)
-    rospy.Subscriber('/joy', Joy, msg)
     roll(msg,rcurrent)
     #rospy.Subscriber('/joy', Joy, grab)
     #We need to wait for new messages

@@ -26,9 +26,9 @@ if __name__ == '__main__':
     print "rcurrent %s" % rcurrent
   def grab(msg,current):
     global gcurrent
-    print "msg5 %s" % msg.axes[5]
-    print "msg4 %s" % msg.axes[4]
-    grab=msg.axes[5]-msg.axes[4]
+    print "msg5 %s" % msg.buttons[5]
+    print "msg4 %s" % msg.buttons[4]
+    grab=msg.buttons[5]-msg.buttons[4]
     gcurrent=gc.grab(grab, current)
   def callback (msg):
     pitch(msg,pcurrent)

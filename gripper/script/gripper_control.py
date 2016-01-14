@@ -23,7 +23,7 @@ def movePitch (pitch, pcurrent):
 		
 def moveRoll (roll,rcurrent):
 	step=5.0
-	upper=270
+	upper=190
 	lower=0
 	if (rcurrent == lower and roll < 0) or (rcurrent == upper and roll > 0) :
 		return rcurrent

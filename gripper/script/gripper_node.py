@@ -19,14 +19,15 @@ if __name__ == '__main__':
   def pitch(msg,current):
     global pcurrent
     pcurrent=gc.movePitch(msg.axes[3], current)
-    #print pcurrent
+    #print "pcurrent %s" % pcurrent
   def roll(msg,current):
     global rcurrent
     rcurrent=gc.moveRoll(msg.axes[2], current)
+    print "rcurrent %s" % rcurrent
   def grab(msg,current):
     global gcurrent
-    print msg.axes[5]
-    print msg.axes[4]
+    print "msg5 %s" % msg.axes[5]
+    print "msg4 %s" % msg.axes[4]
     grab=msg.axes[5]-msg.axes[4]
     gcurrent=gc.grab(grab, current)
   def callback (msg):

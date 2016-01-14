@@ -4,7 +4,7 @@ def movePitch (pitch, pcurrent):
 	step=50
 	upper=180
 	lower=0
-	if current==upper or current== lower:
+	if pcurrent==upper or pcurrent== lower:
 		return pcurrent
 	else:
 		if pitch>=0.1:

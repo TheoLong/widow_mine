@@ -1,12 +1,12 @@
 from servo_drive import pwm as pwm
 
-def movePitch (pitch, pcurrent)
+def movePitch (pitch, pcurrent):
 	step=50
 	upper=180
 	lower=0
-	if current==upper or current== lower
+	if current==upper or current== lower:
 		return pcurrent
-	else
+	else:
 		if pitch>=0.1:
 			pcurrent=pcurrent+step*pitch
 			pwm.pitch(pcurrent)
@@ -14,13 +14,13 @@ def movePitch (pitch, pcurrent)
 			pcurrent=pcurrent-step*pitch
 			pwm.pitch(pcurrent)
 		return pcurrent
-def moveRoll (roll,rcurrent)
+def moveRoll (roll,rcurrent):
 	step=50
 	upper=180
 	lower=0
-	if rcurrent==upper or rcurrent== lower
+	if rcurrent==upper or rcurrent== lower:
 		return rcurrent
-	else
+	else:
 		if roll>=0.1:
 			rcurrent=rcurrent+step*roll
 			pwm.roll(rcurrent)
@@ -28,13 +28,13 @@ def moveRoll (roll,rcurrent)
 			rcurrent=rcurrent-step*roll
 			pwm.roll(rcurrent)
 		return ycurrent
-def grab(grab,gcurrent)
+def grab(grab,gcurrent):
 	step=50
 	upper=180
 	lower=0
-	if gcurrent==upper or gcurrent== lower
+	if gcurrent==upper or gcurrent== lower:
 		return gcurrent
-	else
+	else:
 		if grab>0:
 			gcurrent=gcurrent+step*grab
 			pwm.gripper(gcurrent)

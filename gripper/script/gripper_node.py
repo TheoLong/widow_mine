@@ -26,11 +26,7 @@ def roll(msg,rcurrent):
   rcurrent = temp
 #def grab(msg):
   #gc.grab(msg.axes[3], gcurrent)
-if __name__ == '__main__':
-  pcurrent = 0.0
-  rcurrent = 0.0
-  pmsg=None
-  rmsg=None
+if __name__ == '__main_
   try:
     #Initialize node
     rospy.init_node('gripper_node')

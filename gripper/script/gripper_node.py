@@ -26,7 +26,7 @@ if __name__ == '__main__':
   def grab(msg,gcurrent):
     global gcurrent
     grab=msg.axes[5]-msg.axes[4]
-    gcurrent=gc.grab(grab, gcurrent)
+    gcurrent=gc.grab(grab, current)
   def callback (msg):
     pitch(msg,pcurrent)
     roll(msg,rcurrent)

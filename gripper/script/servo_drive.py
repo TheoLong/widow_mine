@@ -8,7 +8,7 @@ import Adafruit_BBIO.PWM as PWM
 def roll(angle):
     pwm_roll = 0.0
     pwm_roll = angle*0.05333+2.4
-    PWM.set_duty_cycle("P9_16", pwm_roll)
+    PWM.set_duty_cycle("P9_14", pwm_roll)
     print pwm_roll
 def pitch(angle):
     pwm_pitch = 0.0
@@ -17,4 +17,4 @@ def pitch(angle):
 def gripper(angle):
     pwm_gripper = 0.0
     pwm_gripper = angle*0.05333+2.4
-    PWM.set_duty_cycle("P9_16", pwm_gripper)
+    PWM.set_duty_cycle("P8_13", pwm_gripper)

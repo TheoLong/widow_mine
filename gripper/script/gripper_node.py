@@ -27,19 +27,16 @@ def roll(msg,rcurrent):
 #def grab(msg):
   #gc.grab(msg.axes[3], gcurrent)
 if __name__ == '__main__':
-  tmsg=Joy
-  def msg_function(msg):
-    tmsg=msg
   pcurrent=0.0
   rcurrent=0.0
+  def callback (msg):
+    pitch(msg,pcurrent)
+    roll(msg,rcurrent)
   try:
     #Initialize node
     rospy.init_node('gripper_node')
     #Create subscriber, and tell it to call js_call() whenever a message is received
-    rospy.Subscriber('/joy', Joy, msg_function)
-    print tmsg.axis[3]
-    pitch(tmsg,pcurrent)
-    roll(tmsg,rcurrent)
+    rospy.Subscriber('/joy', Joy, callback)
     #rospy.Subscriber('/joy', Joy, grab)
     #We need to wait for new messages
     rospy.spin()

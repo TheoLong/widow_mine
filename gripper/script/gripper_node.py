@@ -12,14 +12,10 @@ import gripper_control as gc
 PWM.start("P9_14",0,50)
 PWM.start("P9_16",0,50)
 PWM.start("P8_13",0,50)
-
-
-
-#def grab(msg):
-  #gc.grab(msg.axes[3], gcurrent)
 if __name__ == '__main__':
   pcurrent=60.0
   rcurrent=90.0
+  gcurrent=60.0
   def pitch(msg,current):
     global pcurrent
     pcurrent=gc.movePitch(msg.axes[3], current)
@@ -27,10 +23,17 @@ if __name__ == '__main__':
   def roll(msg,current):
     global rcurrent
     rcurrent=gc.moveRoll(msg.axes[2], current)
-    #print rcurrent
+  def grab4(msg,gcurrent):
+    global gcurrent
+    gc.grab(msg.axes[4], gcurrent)
+  def grab5(msg,gcurrent):
+    global gcurrent
+    gc.grab(msg.axes[5], gcurrent)
   def callback (msg):
     pitch(msg,pcurrent)
     roll(msg,rcurrent)
+    grab4(msg,gcurrent)
+    grab5(msg,gcurrent)
   try:
     #Initialize node
     rospy.init_node('gripper_node')

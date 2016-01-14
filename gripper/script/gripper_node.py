@@ -22,7 +22,7 @@ if __name__ == '__main__':
     #print "pcurrent %s" % pcurrent
   def roll(msg,current):
     global rcurrent
-    rcurrent=gc.moveRoll(msg.axes[2], current)
+    rcurrent=gc.moveRoll(-msg.axes[2], current)
     print "rcurrent %s" % rcurrent
   def grab(msg,current):
     global gcurrent

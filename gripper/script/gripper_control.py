@@ -11,6 +11,10 @@ def movePitch (pitch, pcurrent):
 	else:
 		if abs(pitch)>=0.1:
 			temp=pcurrent+step*pitch
+			if temp<=lower:
+				temp=lower
+			elif temp>=upper:
+				temp=upper
 			#print pcurrent
 			pwm.pitch(temp)
 			return temp

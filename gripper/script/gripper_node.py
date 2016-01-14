@@ -16,6 +16,7 @@ PWM.start("P8_13",0,50)
 
 def pitch(msg,pcurrent):
   print pcurrent
+  print msg.axes[3]
   temp=gc.movePitch(msg.axes[3], pcurrent)
   pcurrent = temp
   print temp

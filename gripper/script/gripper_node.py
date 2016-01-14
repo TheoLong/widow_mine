@@ -21,7 +21,7 @@ def pitch(msg):
   pcurrent = temp
   print temp
 def roll(msg):
-  global pcurrent
+  global rcurrent
   temp=gc.moveRoll(msg.axes[2], rcurrent)
   rcurrent = temp
 #def grab(msg):

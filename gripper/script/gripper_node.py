@@ -29,7 +29,7 @@ def roll(msg,rcurrent):
 if __name__ == '__main__':
   pcurrent=0.0
   rcurrent=0.0
-  msg=None
+  msg=Joy
   try:
     #Initialize node
     rospy.init_node('gripper_node')

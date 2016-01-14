@@ -18,8 +18,8 @@ PWM.start("P8_13",0,50)
 #def grab(msg):
   #gc.grab(msg.axes[3], gcurrent)
 if __name__ == '__main__':
-  pcurrent=0.0
-  rcurrent=0.0
+  pcurrent=90.0
+  rcurrent=90.0
   def pitch(msg,pcurrent):
     print pcurrent
     pcurrent=gc.movePitch(msg.axes[3], pcurrent)

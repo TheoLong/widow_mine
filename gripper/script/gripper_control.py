@@ -51,5 +51,5 @@ def grab(grab,gcurrent):
 			temp=lower
 		elif temp>=upper:
 			temp=upper
-		pwm.roll(temp)
+		pwm.gripper(temp)
 		return temp

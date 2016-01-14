@@ -21,14 +21,13 @@ if __name__ == '__main__':
   pcurrent=0.0
   rcurrent=0.0
   def pitch(msg,pcurrent):
+    global pcurrent
     print pcurrent
-    temp=gc.movePitch(msg.axes[3], pcurrent)
-    pcurrent = temp
-    print temp
+    pcurrent=gc.movePitch(msg.axes[3], pcurrent)
   def roll(msg,rcurrent):
+    global rcurrent
     print rcurrent
-    temp=gc.moveRoll(msg.axes[2], rcurrent)
-    rcurrent = temp
+    rcurrent=gc.moveRoll(msg.axes[2], rcurrent)
   def callback (msg):
     pitch(msg,pcurrent)
     roll(msg,rcurrent)

@@ -14,12 +14,12 @@ PWM.start("P9_16",0,50)
 PWM.start("P8_13",0,50)
 if __name__ == '__main__':
   pcurrent=60.0
-  rcurrent=90.0
+  rcurrent=130.0
   gcurrent=60.0
   def pitch(msg,current):
     global pcurrent
     pcurrent=gc.movePitch(-msg.axes[3], current)
-    #print "pcurrent %s" % pcurrent
+    print "pcurrent %s" % pcurrent
   def roll(msg,current):
     global rcurrent
     rcurrent=gc.moveRoll(-msg.axes[2], current)

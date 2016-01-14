@@ -16,8 +16,8 @@ from std_msgs.msg import String
 
 # Create variable so we can always see/use it, but set it to a value that indicates it's not yet valid
 def drive(msg):
-	faxis = msg.axes[4]
-	baxis = msg.axes[5]
+	faxis = msg.axes[5]
+	baxis = msg.axes[4]
 	steering = msg.axes[0]	
 	gas= faxis-baxis
 	diff_control(gas, steering)

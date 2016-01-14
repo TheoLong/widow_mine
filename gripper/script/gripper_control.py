@@ -40,8 +40,8 @@ def moveRoll (roll,rcurrent):
 			return rcurrent
 def grab(grab,gcurrent):
 	step=3.0
-	upper=45
-	lower=90
+	upper=30
+	lower=120
 	print grab
 	if (gcurrent == lower and grab < 0) or (gcurrent == upper and grab > 0) or (grab==0):
 		return gcurrent

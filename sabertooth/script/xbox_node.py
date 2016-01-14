@@ -20,7 +20,6 @@ def drive(msg):
 	baxis = msg.axes[5]
 	steering = msg.axes[0]	
 	gas= faxis-baxis
-	steering= axis
 	diff_control(gas, steering)
 # If this is loaded as the main python file, execute the main details
 if __name__ == '__main__':

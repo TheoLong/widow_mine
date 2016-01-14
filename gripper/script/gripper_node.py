@@ -12,11 +12,13 @@ import gripper_control as gc
 pcurrent=0
 rccrent=0
 def pitch(msg):
+  tamp=gc.movePitch(msg.axes[3], pcurrent)
   global pcurrent
-  pcurrent=gc.movePitch(msg.axes[3], pcurrent)
+  pcurrent = tamp
 def roll(msg):
+  tamp=gc.moveRoll(msg.axes[2], rcurrent)
   global rcurrent
-  rcurrent=gc.moveRoll(msg.axes[2], rcurrent)
+  rcurrent = tamp
 #def grab(msg):
   #gc.grab(msg.axes[3], gcurrent)
 if __name__ == '__main__':

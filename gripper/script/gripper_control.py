@@ -28,7 +28,7 @@ def moveRoll (roll,rcurrent):
 		if roll>=0.1:
 			rcurrent=rcurrent+step*roll
 			pwm.roll(rcurrent)
-			print rcurrent
+			#print rcurrent
 			return rcurrent
 		
 		elif roll<=-0.1:

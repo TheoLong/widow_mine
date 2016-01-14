@@ -25,6 +25,8 @@ if __name__ == '__main__':
     rcurrent=gc.moveRoll(msg.axes[2], current)
   def grab(msg,current):
     global gcurrent
+    print msg.axes[5]
+    print msg.axes[4]
     grab=msg.axes[5]-msg.axes[4]
     gcurrent=gc.grab(grab, current)
   def callback (msg):

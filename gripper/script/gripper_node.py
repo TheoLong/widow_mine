@@ -9,8 +9,6 @@ from sensor_msgs.msg import Joy
 import Adafruit_BBIO.GPIO as GPIO
 import Adafruit_BBIO.PWM as PWM
 import gripper_control as gc
-pcurrent=0.0
-rcurrent=0.0
 PWM.start("P9_14",0,50)
 PWM.start("P9_16",0,50)
 PWM.start("P8_13",0,50)

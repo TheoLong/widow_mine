@@ -10,7 +10,6 @@ def movePitch (pitch, pcurrent):
 	else:
 		if pitch>=0.1:
 			pcurrent=pcurrent+step*pitch
-			print "pcurrent"
 			print pcurrent
 			pwm.pitch(pcurrent)
 			return pcurrent

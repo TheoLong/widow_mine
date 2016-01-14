@@ -9,14 +9,14 @@ def movePitch (pitch, pcurrent):
 		return pcurrent
 	else:
 		if pitch>=0.1:
-			pcurrent=pcurrent+step*pitch
+			temp=pcurrent+step*pitch
 			print pcurrent
 			pwm.pitch(pcurrent)
-			return pcurrent
+			return temp
 		elif pitch<=-0.1:
-			pcurrent=pcurrent-step*pitch
+			temp=pcurrent-step*pitch
 			pwm.pitch(pcurrent)
-			return pcurrent
+			return temp
 def moveRoll (roll,rcurrent):
 	step=50.0
 	upper=180.0

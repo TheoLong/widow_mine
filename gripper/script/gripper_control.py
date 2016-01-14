@@ -5,7 +5,7 @@ def movePitch (pitch, pcurrent):
 	upper=180.0
 	lower=0.0
 	#print pitch
-	if pcurrent==upper or pcurrent== lower:
+	if (pcurrent == lower and pitch < 0) or (pcurrent == upper and pitch > 0) :
 		return pcurrent
 	else:
 		if pitch>=0.1:

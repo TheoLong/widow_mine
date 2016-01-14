@@ -23,17 +23,14 @@ if __name__ == '__main__':
   def roll(msg,current):
     global rcurrent
     rcurrent=gc.moveRoll(msg.axes[2], current)
-  def grab4(msg,gcurrent):
+  def grab(msg,gcurrent):
     global gcurrent
-    gc.grab(msg.axes[4], gcurrent)
-  def grab5(msg,gcurrent):
-    global gcurrent
-    gc.grab(msg.axes[5], gcurrent)
+    grab=msg.axes[5]-msg.axes[4]
+    gcurrent=gc.grab(grab, gcurrent)
   def callback (msg):
     pitch(msg,pcurrent)
     roll(msg,rcurrent)
-    grab4(msg,gcurrent)
-    grab5(msg,gcurrent)
+    grab(msg,gcurrent)
   try:
     #Initialize node
     rospy.init_node('gripper_node')

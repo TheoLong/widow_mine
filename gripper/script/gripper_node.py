@@ -15,14 +15,13 @@ PWM.start("P8_13",0,50)
 pcurrent = 0.0
 rcurrent = 0.0
 
-def pitch(msg):
-  global pcurrent
+def pitch(msg,pcurrent):
   print pcurrent
   temp=gc.movePitch(msg.axes[3], pcurrent)
   pcurrent = temp
   print temp
-def roll(msg):
-  global rcurrent
+def roll(msg,rcurrent):
+  print rcurrent
   temp=gc.moveRoll(msg.axes[2], rcurrent)
   rcurrent = temp
 #def grab(msg):

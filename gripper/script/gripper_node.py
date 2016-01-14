@@ -25,7 +25,7 @@ if __name__ == '__main__':
     print pcurrent
   def roll(msg,rcurrent):
     rcurrent=gc.moveRoll(msg.axes[2], rcurrent)
-    print rcurrent
+    #print rcurrent
   def callback (msg):
     pitch(msg,pcurrent)
     roll(msg,rcurrent)

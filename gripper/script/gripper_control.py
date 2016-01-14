@@ -2,8 +2,8 @@ import servo_drive as pwm
 import math
 def movePitch (pitch, pcurrent):
 	step=5.0
-	upper=180.0
-	lower=0.0
+	upper=190.0
+	lower=40.0
 	#print pcurrent
 	#print pitch
 	if (pcurrent == lower and pitch < 0) or (pcurrent == upper and pitch > 0) :

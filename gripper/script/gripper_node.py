@@ -19,7 +19,7 @@ if __name__ == '__main__':
   def pitch(msg,current):
     global pcurrent
     pcurrent=gc.movePitch(msg.axes[3], current)
-    print pcurrent
+    #print pcurrent
   def roll(msg,current):
     global rcurrent
     rcurrent=gc.moveRoll(msg.axes[2], current)

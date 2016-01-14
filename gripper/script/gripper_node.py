@@ -30,7 +30,6 @@ if __name__ == '__main__':
   tmsg=Joy
   def msg_function(msg):
     tmsg=msg
-    print tmsg.axis[3]
   pcurrent=0.0
   rcurrent=0.0
   try:
@@ -38,6 +37,7 @@ if __name__ == '__main__':
     rospy.init_node('gripper_node')
     #Create subscriber, and tell it to call js_call() whenever a message is received
     rospy.Subscriber('/joy', Joy, msg_function)
+    print tmsg.axis[3]
     pitch(tmsg,pcurrent)
     roll(tmsg,rcurrent)
     #rospy.Subscriber('/joy', Joy, grab)

@@ -12,10 +12,10 @@ import gripper_control as gc
 PWM.start("P9_14",0,50)
 PWM.start("P9_16",0,50)
 PWM.start("P8_13",0,50)
-global pcurrent
-global rcurrent
 pcurrent = 0.0
 rcurrent = 0.0
+global pcurrent
+global rcurrent
 def pitch(msg):
   print pcurrent
   temp=gc.movePitch(msg.axes[3], pcurrent)

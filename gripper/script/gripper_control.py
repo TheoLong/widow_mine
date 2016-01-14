@@ -1,4 +1,4 @@
-from servo_drive import pwm as pwm
+import servo_drive as pwm
 
 def movePitch (pitch, pcurrent):
 	step=50

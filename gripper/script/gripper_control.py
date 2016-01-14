@@ -10,7 +10,7 @@ def movePitch (pitch, pcurrent):
 		if pitch>=0.1:
 			pcurrent=pcurrent+step*pitch
 			pwm.pitch(pcurrent)
-		else if pitch<=-0.1:
+		elif pitch<=-0.1:
 			pcurrent=pcurrent-step*pitch
 			pwm.pitch(pcurrent)
 		return pcurrent
@@ -24,7 +24,7 @@ def moveRoll (roll,rcurrent):
 		if roll>=0.1:
 			rcurrent=rcurrent+step*roll
 			pwm.roll(rcurrent)
-		else if roll<=-0.1:
+		elif roll<=-0.1:
 			rcurrent=rcurrent-step*roll
 			pwm.roll(rcurrent)
 		return ycurrent
@@ -38,7 +38,7 @@ def grab(grab,gcurrent):
 		if grab>0:
 			gcurrent=gcurrent+step*grab
 			pwm.gripper(gcurrent)
-		else if grab<0:
+		elif grab<0:
 			gcurrent=gcurrent-step*grab
 			pwm.gripper(gcurrent)
 		return gcurrent

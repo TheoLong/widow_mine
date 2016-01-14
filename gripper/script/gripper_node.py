@@ -28,7 +28,7 @@ if __name__ == '__main__':
     global pcurrent
     pcurrent = 0.0
     #Initialize node
-    rospy.init_node('motornode')
+    rospy.init_node('gripper_node')
     #Create subscriber, and tell it to call js_call() whenever a message is received
     rospy.Subscriber('/joy', Joy, pitch)
     rospy.Subscriber('/joy', Joy, roll)

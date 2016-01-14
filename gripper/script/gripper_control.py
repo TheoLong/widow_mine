@@ -14,6 +14,8 @@ def movePitch (pitch, pcurrent):
 			#print pcurrent
 			pwm.pitch(temp)
 			return temp
+		else:
+			return pcurrent
 		
 def moveRoll (roll,rcurrent):
 	step=50.0

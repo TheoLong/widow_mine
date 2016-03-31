@@ -1,4 +1,5 @@
 <launch>
+  <node name="joy_node" pkg="joy" type="joy_node" />
   <node name="xbox_node" pkg="sabertooth" type="xbox_node.py" />
   <node name="gripper_node" pkg="gripper" type="gripper_node.py" />
 </launch>

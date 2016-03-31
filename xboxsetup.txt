@@ -1,0 +1,23 @@
+How to set up xbox control
+1 first: you need install staff
+
+sudo apt-get install --install-recommends jstest* joystick xboxdrv
+
+2 insert your xbox controller
+
+3 use these command to setup the correct js port
+
+sudo xboxdrv --silent
+4 open the graphic user interface
+
+jstest-gtk
+5 it is usually js4
+6 install joy package. 
+
+sudo apt-get install ros-indigo-joy
+
+7 setup the js port for joy
+
+rosparam set joy_node/dev "/dev/input/js4"
+
+8 rosrun joy joy_node

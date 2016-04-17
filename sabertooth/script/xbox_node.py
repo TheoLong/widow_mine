@@ -18,7 +18,7 @@ from std_msgs.msg import String
 def drive(msg):
 	faxis = msg.axes[5]
 	baxis = msg.axes[4]
-	steering = msg.axes[0]	
+	steering = -msg.axes[0]	
 	gas= faxis-baxis
 	gas = 0.7*gas
 	diff_control(gas, steering)
